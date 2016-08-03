@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Новости</title>
+	<style>
+		select{
+			width: 200px;
+			height: 31px;
+			border-radius: 5px;
+			margin-bottom: 20px;
+			display: inline-block;
+			margin-left: 30px;
+			background-color: rgba(131, 131, 131, 0.64);
+			box-shadow: 1px 3px 4px 3px rgb(221, 221, 221);
+		}
+			
+	</style>
+</head>
+<body>
+	<h1>{{header}}</h1>
+	<form action="/" method="post">
+		<select name="site">
+			<option value="mail">mail.ru</option>
+			<option value="segodnya">segodnya</option>
+		</select>
+			<input type="text" name="how_many" value="7">
+		<button>Прочитать</button>
+	</form>
+	<br>
+	<ul>
+		{{#each news}}
+			<li>
+			{{this}}
+			</li>
+		{{/each}}
+	</ul>
+
+</body>
+</html>
